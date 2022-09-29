@@ -29,8 +29,8 @@
 		
 		http://localhost/ch03/jstl.jsp?num=2
 		* http://localhost/ch03/jstl.jsp -> URL
-		* ?num=5 -> QueryString / Http파라미터
-		* num이라는 name에 5라는 값이 있다
+		* ?num=5 -> QueryString. Http파라미터 라고도 한다.
+		* num이라는 name에 5라는 값이 있다!
 	-->
 	<form>
 		<p>숫자: <input type="text" name="num" />

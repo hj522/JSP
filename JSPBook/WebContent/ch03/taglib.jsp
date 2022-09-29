@@ -54,7 +54,7 @@
 	<c:choose>
 		<c:when test="${money<=0}">무일푼</c:when>
 		<c:when test="${money<=5000}">커피 한 잔의 여유 가능</c:when>
-		<c:otherwise>화평본가</c:otherwise>
+		<c:otherwise>밥묵자</c:otherwise>
 	</c:choose>
 </body>
 </html>
