@@ -29,6 +29,9 @@
 	</div>
 	<!--도서 목록 -->
 	<div class="container">
+		<div class="row" style="justify-content:right;margin:0 0 30px; 0;">
+			<a href="addBook.jsp" class="btn btn-primary" style="float:right;clear:both;">도서 추가</a>
+		</div>
 		<div class="col">
 			<c:forEach var="book" items="${listOfBooks}">
 				<div class="col-md-10">

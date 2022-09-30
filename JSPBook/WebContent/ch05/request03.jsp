@@ -15,7 +15,7 @@
 	<!-- 웹 브라우저에 요청한 URI를 가져옴 -->
 	<p>요청 URI: <%=request.getRequestURI()%></p>
 	<!-- 현재 JSP 페이지의 웹 어플리케이션 콘텍스트 경로를 가져옴 -->
-	<p>컨텍스트 경로: <%=request.getContextPath()%></p>
+	<p>★컨텍스트 경로: <%=request.getContextPath()%></p>
 	<p>서버 이름: <%=request.getServerName()%></p>
 	<p>서버 포트:<%=request.getServerPort()%></p>
 	<!-- 웹 브라우저의 전체 요청 파라미터 문자열(쿼리문)을 가져옴 -->
