@@ -35,6 +35,8 @@
 		<div class="col">
 			<c:forEach var="book" items="${listOfBooks}">
 				<div class="col-md-10">
+					<img alt="${book.bookId}" title="${book.bookId}" src="/BookMarket/resources/images/${book.filename}"
+					style="width:30%">
 					<h3>${book.name}</h3>
 					<p>${book.description}</p>
 					<p>${book.author} | ${book.publisher} | ${book.unitPrice}</p>

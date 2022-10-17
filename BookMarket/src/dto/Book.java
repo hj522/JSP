@@ -15,6 +15,8 @@ public class Book {
 	private String releaseDate;
 	private String condition;
 	
+	private String filename;
+	
 	// 기본 생성자
 	public Book() {
 	}
@@ -93,13 +95,22 @@ public class Book {
 		this.condition = condition;
 	}
 
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
+
 	@Override
 	public String toString() {
 		return "Book [bookId=" + bookId + ", name=" + name + ", unitPrice=" + unitPrice + ", author=" + author
 				+ ", description=" + description + ", publisher=" + publisher + ", category=" + category
 				+ ", unitsInStock=" + unitsInStock + ", totalPages=" + totalPages + ", releaseDate=" + releaseDate
-				+ ", condition=" + condition + "]";
+				+ ", condition=" + condition + ", filename=" + filename + "]";
 	}
+
 }
 
 

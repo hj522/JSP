@@ -38,6 +38,8 @@
 			<!-- List<ProductVO> -> 한 행을 꺼내오면 -> ProductVO -->
 			<c:forEach var="productVO" items="${listOfProducts}">
 				<div class="col-md-4">
+					<img alt="${productVO.pname}" title="${productVO.pname}" src="/JSPBook/resources/images/${productVO.filename}"
+					style="width:100%;">
 					<h3>${productVO.pname}</h3>
 					<p>${productVO.description}</p>
 					<p>${productVO.unitPrice}원</p>

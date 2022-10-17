@@ -31,20 +31,24 @@ public class BookRepository {
 		b.setReleaseDate("2022년 9월 28일");
 		b.setTotalPages(300);
 		b.setCondition("New");
-
+		
+		b.setFilename("P001.png");
+		
 		listOfBooks.add(b);
 		
 		Book b2 = new Book("P002", "[IT모바일]쉽게 배우는 자바 프로그래밍", 27000);
 		
-		b2.setAuthor("우종중");
+		b2.setAuthor("우종정");
 		b2.setDescription("객체 지향의 핵심과 자바의 현대적 기능을 충실히 다루면서도 초보자가 쉽게 학습할 수 있게 구성했습니다. 시각화 도구를 활용한 개념 설명과 군더더기 없는 핵심 코드를 통해 개념과 구현...");
 		b2.setPublisher("한빛아카데미");
 		b2.setCategory("Book");
 		b2.setUnitsInStock(1000);
 		b2.setReleaseDate("2022년 9월 28일");
-		b.setTotalPages(300);
+		b2.setTotalPages(300);
 		b2.setCondition("New");
-
+		
+		b2.setFilename("P002.png");
+		
 		listOfBooks.add(b2);
 		
 		Book b3 = new Book("P003", "[IT모바일]스프링4 입문", 27000);
@@ -55,9 +59,11 @@ public class BookRepository {
 		b3.setCategory("Book");
 		b3.setUnitsInStock(1000);
 		b3.setReleaseDate("2022년 9월 28일");
-		b.setTotalPages(300);
+		b3.setTotalPages(300);
 		b3.setCondition("New");
 
+		b3.setFilename("P003.png");
+		
 		listOfBooks.add(b3);
 
 	}
@@ -65,6 +71,10 @@ public class BookRepository {
 	// listOfBooks에 저장된 모든 도서 목록을 가져오는 메소드
 	public List<Book> getAllBooks(){
 		return listOfBooks;
+	}
+	
+	public void addBook(Book book) {
+		listOfBooks.add(book);
 	}
 	
 	// 상세보기

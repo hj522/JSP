@@ -3,6 +3,7 @@
 <%@page import="dto.Book"%>
 <%@page import="dao.BookRepository"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+<%@ page errorPage="exceptionNoBookId.jsp" %>
 <!DOCTYPE html>
 <%	//스크립틀릿 태그
 	String id = request.getParameter("id");
@@ -26,6 +27,9 @@
 	<!-- ================ 도서 상세 시작 ================ -->
 	<div class="container">
 		<div class="row">
+			<div class="col-md-5">
+            <img src="/BookMarket/resources/images/<%=book.getFilename()%>" style="width:50%"/>
+         	</div>
 			<div class="col-md-10">
 				<h3>${book.name}</h3>
 				<p>${book.description}</p>

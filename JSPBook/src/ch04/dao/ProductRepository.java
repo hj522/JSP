@@ -2,8 +2,8 @@ package ch04.dao;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import ch04.vo.ProductVO;
+import java.lang.NullPointerException;
 
 public class ProductRepository {
 	
@@ -30,6 +30,8 @@ public class ProductRepository {
 		phone.setManufacturer("Apple");
 		phone.setUnitsInStock(1000);
 		phone.setCondition("New");
+		// ch07에서 추가
+		phone.setFilename("P1234.png");
 		
 		listOfProducts.add(phone);
 		
@@ -40,6 +42,8 @@ public class ProductRepository {
 		notebook.setManufacturer("LG");
 		notebook.setUnitsInStock(1000);
 		notebook.setCondition("Refurbished"); // 재생산품
+		// ch07에서 추가
+		notebook.setFilename("P1235.png");
 		
 		listOfProducts.add(notebook);
 		
@@ -50,6 +54,8 @@ public class ProductRepository {
 		tablet.setManufacturer("Samsung");
 		tablet.setUnitsInStock(1000);
 		tablet.setCondition("Old"); // 중고 상품
+		// ch07에서 추가
+		tablet.setFilename("P1236.png");
 		
 		listOfProducts.add(tablet);
 	}
