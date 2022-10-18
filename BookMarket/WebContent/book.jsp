@@ -1,8 +1,9 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%> 
 <%@ page import="java.util.List"%>
 <%@page import="dto.Book"%>
 <%@page import="dao.BookRepository"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
 <%@ page errorPage="exceptionNoBookId.jsp" %>
 <!DOCTYPE html>
 <%	//스크립틀릿 태그
@@ -15,6 +16,18 @@
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <title>도서 상세 정보</title>
+<script type="text/javascript">
+	// 주문을 위한 핸들러 함수
+	function addToCart() {
+		let result = confirm("도서를 장바구니에 추가하시겠습니까?");
+		
+		if(result) {
+			document.addForm.submit();
+		} else {
+			document.addForm.reset();
+		}
+	}
+</script>
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
@@ -44,8 +57,11 @@
 				<p><b>출판일</b>: ${book.releaseDate}</p> 
 				<h4>${book.unitPrice}원</h4>
 				<p>
-					<a href="#" class="btn btn-info">상품주문&raquo;</a>
-					<a href="books.jsp" class="btn btn-secondary">상품목록&raquo;</a>
+				<form name="addForm" action="addCart.jsp?id=${book.bookId}" method="post">
+					<a href="#" class="btn btn-info" onclick="addToCart()">주문하기&raquo;</a>
+					<a href="cart.jsp" class="btn btn-warning">장바구니 &raquo;</a>
+					<a href="books.jsp" class="btn btn-secondary">도서목록&raquo;</a>
+				</form>
 				</p>
 			</div>
 		</div>

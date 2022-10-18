@@ -17,6 +17,8 @@ public class Book {
 	
 	private String filename;
 	
+	private int quantity;	// 장바구니에 담긴 도서 수량 관리용
+	
 	// 기본 생성자
 	public Book() {
 	}
@@ -103,12 +105,20 @@ public class Book {
 		this.filename = filename;
 	}
 
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
 	@Override
 	public String toString() {
 		return "Book [bookId=" + bookId + ", name=" + name + ", unitPrice=" + unitPrice + ", author=" + author
 				+ ", description=" + description + ", publisher=" + publisher + ", category=" + category
 				+ ", unitsInStock=" + unitsInStock + ", totalPages=" + totalPages + ", releaseDate=" + releaseDate
-				+ ", condition=" + condition + ", filename=" + filename + "]";
+				+ ", condition=" + condition + ", filename=" + filename + ", quantity=" + quantity + "]";
 	}
 
 }
