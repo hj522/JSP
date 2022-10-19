@@ -60,7 +60,7 @@
 			list.get(i).setQuantity(list.get(i).getQuantity()+1); //기존수량에 1 더해서 새로 세팅
 		}
 	}
-	// 3-2) cartlistㄹ라는 장바구니에 P1235라는 상품이 없는 경우(cnt=>0)
+	// 3-2) cartlist라는 장바구니에 P1235라는 상품이 없는 경우(cnt=>0)
 	// cartlist라는 장바구니에 P1235라는 상품을 넣자. quantity 값을 1로 처리
 	if(cnt==0) {
 		product.setQuantity(1);

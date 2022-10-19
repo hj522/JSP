@@ -8,6 +8,7 @@
 	String id = request.getParameter("id");	// P1234
 	
 	// 만약 removeCart.jsp 또는 removeCart.jsp?id=Z1234
+	
 	// case 1) removeCart.jsp
 	if(id==null || id.trim().equals("")) {
 		response.sendRedirect("products.jsp");

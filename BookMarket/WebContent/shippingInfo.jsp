@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="/JSPBook/resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="/BookMarket/resources/css/bootstrap.min.css">
 <title>배송 정보</title>
 </head>
 <body>
